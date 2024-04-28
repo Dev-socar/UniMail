@@ -3,9 +3,13 @@
 
 .correos {
   position: relative;
-  height: 100vh;
+  height: 30rem;
   overflow: scroll;
-  padding-bottom: 6.8rem;
+  padding-bottom: 2rem;
+  @include m.tablet {
+    padding-bottom: 6.8rem;
+     height: 100vh;
+  }
 }
 
 .correo {

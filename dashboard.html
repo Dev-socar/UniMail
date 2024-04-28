@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="build/css/app.css">
 </head>
 
@@ -22,12 +23,108 @@
         </div>
         <div class="header__contenido">
             <p class="header__usuario">Omar Fernando Solís Carvajal</p>
-            <a href="#" class="header__icono" title="Configuración"><i class="fa-solid fa-gear"></i></a>
+            <a href="#" class="header__icono header__icono-configuracion" title="Configuración"><i class="fa-solid fa-gear"></i></a>
             <a href="index.html" title="Cerrar Sesión" class="header__icono"><i
                     class="fa-solid fa-right-from-bracket"></i></a>
         </div>
     </header>
     <main class="dashboard">
+
+        <div class="configuracion configuracion--ocultar">
+            <div class="configuracion__overlay">
+                <div class="configuracion__formulario">
+                    <h2 class="configuracion__heading">Configurar Filtrado</h2>
+                    <form class="formulario">
+                        <div class="formulario__campo">
+                            <label for="licenciatura" class="formulario__label">¿A qué licenciatura perteneces?</label>
+                            <select required class="formulario__input" id="licenciatura">
+                                <option value=""  disabled>Escoge tu licenciatura</option>
+                                <option> Licenciatura en Actuaría</option>
+                                <option selected>Licenciatura en Ciencias de la Computación</option>
+                                <option>Licenciatura en Enseñanza de las Matemáticas</option>
+                                <option>Licenciatura en Ingeniería en Computación</option>
+                                <option>Licenciatura en Ingeniería de Software</option>
+                                <option>Licenciatura en Matemáticas</option>
+                                <option>Licenciatura en Contador Público</option>
+                                <option>Licenciatura en Mercadotecnia y Negocios Internacionales</option>
+                                <option>Licenciatura en Administración de Tecnologías de Información</option>
+                                <option>Licenciatura en Administración</option>
+                                <option>Ingeniería en Alimentos</option>
+                                <option>Licenciatura en Ingeniería Civil</option>
+                                <option>Licenciatura en Ingeniería Física.</option>
+                                <option>Licenciatura en Ingeniería en Mecatronica</option>
+                                <option>Licenciatura en Ingeniería Química Industrial</option>
+                                <option>Licenciatura en Ingeniería Industrial Logística</option>
+                                <option>Ingeniería en Biotecnología</option>
+                                <option>Licenciatura Institucional en Química Aplicada</option>
+                                <option>Licenciatura en Química Industrial</option>
+                                <option>Licenciatura en Derecho</option>
+                                <option>Licenciatura en Arqueología</option>
+                                <option>Licenciatura en Literatura Latinoamericana</option>
+                                <option>Licenciatura en Turismo</option>
+                                <option>Licenciatura en Antropología Social</option>
+                                <option>Licenciatura en Comunicación Social</option>
+                                <option>Licenciatura en Historia</option>
+                                <option>Licenciatura en Economía</option>
+                                <option>Licenciatura en Comercio Internacional</option>
+                                <option>Licenciatura en Psicología</option>
+                                <option>Licenciatura en Educación</option>
+                                <option>Licenciatura en Enseñanza del Idioma Inglés</option>
+                                <option>Licenciatura en Ingeniería en Energías Renovables</option>
+                                <option>Licenciatura en Nutrición</option>
+                                <option>Licenciatura en Médico Cirujano</option>
+                                <option>Licenciatura en Rehabilitación</option>
+                                <option>Licenciatura en Cirujano Dentista</option>
+                                <option>Licenciatura en Enfermería</option>
+                                <option>Licenciatura en Trabajo Social</option>
+                                <option>Licenciatura en Químico Farmacéutico Biólogo</option>
+                                <option>Licenciatura en Química</option>
+                                <option>Licenciatura en Artes Visuales</option>
+                                <option>Licenciatura en Diseño del Hábitat</option>
+                                <option>Licenciatura en Arquitectura</option>
+                                <option>Licenciatura en Agroecología</option>
+                                <option>Licenciatura en Medicina Veterinaria y Zootecnia</option>
+                                <option>Licenciatura en Biología</option>
+                                <option>Licenciatura en Biología Marina</option>
+                                <option>Licenciatura en Química Aplicada</option>
+                                <option>Licenciatura en Educación</option>
+                                <option>Licenciatura en Gestión Pública</option>
+                            </select>
+                        </div>
+                        <div class="formulario__campo">
+                            <label for="interes" class="formulario__label">¿Cuáles son tus áreas de interes? (separadas
+                                por
+                                una coma)</label>
+                            <input type="text" class="formulario__input" id="interes"
+                                placeholder="Ej. Tecnología, Deportes, Medicina" value="Desarrollo Web">
+                            <div id="tags__interes" class="formulario__listado">
+                            </div>
+                        </div>
+                        <div class="formulario__campo">
+                            <label for="pregunta1" class="formulario__label">Aquí se pondrá otra pregunta</label>
+                            <input required type="text" class="formulario__input" id="pregunta1"
+                                placeholder="Respuesta Pregunta " value="Respuesta">
+                        </div>
+                        <div class="formulario__campo">
+                            <label for="pregunta2" class="formulario__label">Aquí se pondrá otra pregunta</label>
+                            <input required type="text" class="formulario__input" id="pregunta2"
+                                placeholder="Respuesta Pregunta " value="Respuesta">
+                        </div>
+                        <div class="formulario__campo formulario__campo--inline">
+                            <label for="recordar" class="formulario__label">Recibir correos de las asignaturas
+                                inscritas</label>
+                            <input type="checkbox" class="formulario__input" id="recordar" checked>
+                        </div>
+                        <div class="formulario__botones">
+                            <button class="formulario__boton formulario__boton-guardar">Guardar</button>
+                            <a href="#" class="formulario__boton formulario__boton-cancelar">Cancelar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
         <div class="dashboard__grid">
             <aside class="correos">
                 <div class="correo">
@@ -213,13 +310,61 @@
             </aside>
 
             <section class="mensaje">
-                <h1>Mensaje</h1>
+                <div class="mensaje__respuesta mensaje__respuesta--oculto">
+                    <div class="mensaje__respuesta-informacion">
+                        <button class="mensaje__boton mensaje__boton--enviar">Enviar</button>
+                        <p class="mensaje__destinatario">Para: webmasteruady@correo.com</p>
+                    </div>
+                    <div class="mensaje__respuesta">
+                        <textarea class="mensaje__respuesta-input" name="respuesta" id="respuesta"></textarea>
+                    </div>
+                </div>
+                <div class="mensaje__reenviar mensaje__reenviar--ocultar">
+                    <div class="mensaje__reenviar-contenido">
+                        <label for="destinatario" class="mensaje__reenviar-label">Reenviar a: </label>
+                        <input type="email" id="destinatario" class="mensaje__reenviar-input"
+                            placeholder="correo@domio.com">
+                        <button class="mensaje__boton mensaje__boton--reenviar-email">Reenviar</button>
+                    </div>
+                </div>
+                <div class="mensaje__contenido">
+                    <h2 class="mensaje__heading">¿Te interesa estudiar y trabajar en Alemania? ¡Ven y participa en
+                        nuestra feria virtual sobre oportunidades de estudio y
+                        carreras profesionales en Alemania!</h2>
+                    <p class="mensaje__texto">
+                        ¡Nos dará mucho gusto saludarte!<br>
+                        La feria virtual tendrá lugar el miércoles 8 de mayo de 2024 de 7 a 10 am (hora de la CDMX).<br>
+                        Aprovecha la oportunidad de<br>
+                    <ul class="mensaje__texto-lista">
+                        <li class="mensaje__texto-item">Platicar en vivo con representantes del DAAD, de Make it in
+                            Germany y de las 12 universidades
+                            participantes que estarán
+                            encantados de responder a tus preguntas</li>
+                        <li class="mensaje__texto-item">
+                            Escuchar las historias de estudiantes internacionales que estudian y/o trabajan en Alemania
+                        </li>
+                    </ul>
+                    Regístrate gratis en <a href="#"
+                        class="mensaje__texto-link">www.meetyoo.live/register/1/Study-in-Germany-Virtual-Fair</a>
+                    Podrás encontrar la hora exacta de inicio en tu zona horaria y más información sobre las
+                    universidades alemanas
+                    participantes en el catálogo de expositores:
+                    <a href="#"
+                        class="mensaje__texto-link">www.exhibitorcatalogue.com/study-in-germany-virtual-fair-study-career</a>
+                    </p>
+                    <div class="mensaje__botones">
+                        <button class="mensaje__boton mensaje__boton--responder">Responder</button>
+                        <button class="mensaje__boton mensaje__boton--reenviar">Reenviar</button>
+                    </div>
+                </div>
             </section>
         </div>
     </main>
 
-
-
+    <script src="js/responder.js"></script>
+    <script src="js/reenviar.js"></script>
+    <script src="js/configuracion.js"></script>
+    <script src="js/tags.js"></script>
 </body>
 
 </html>

@@ -2,7 +2,7 @@
 @use "base/mixins" as m;
 
 .dashboard {
-    
+    position: relative;
   &__grid {
     @include m.tablet {
       display: grid;

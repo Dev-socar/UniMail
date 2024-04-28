@@ -1,0 +1,41 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.configuracion {
+  background-color: rgb(0 0 0 / 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  height: 100vh;
+  display: block;
+  &--ocultar {
+    display: none;
+  }
+  &__overlay {
+    display: flex;
+    justify-content: center;
+    @include m.tablet {
+      margin-top: 5rem;
+    }
+  }
+  &__heading {
+    color: v.$primario;
+  }
+  &__formulario {
+    background-color: v.$grisClaro;
+    padding: 1rem;
+    width: 90%;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include m.tablet {
+      width: 60%;
+    }
+  }
+}
