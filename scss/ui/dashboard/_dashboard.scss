@@ -1,0 +1,12 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.dashboard {
+    
+  &__grid {
+    @include m.tablet {
+      display: grid;
+      grid-template-columns: 2fr 4fr;
+    }
+  }
+}

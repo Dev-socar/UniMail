@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uni-Mail - Login</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@0,400;0,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+
+<body>
+    <main class="login">
+        <div class="login__grid">
+            <div class="login__contenido">
+                <h1 class="login__heading">Uni-Mail</h1>
+                <p class="login__texto">Tu buzon UADY bajo control !</p>
+                <ul class="login__lista">
+                    <li class="login__lista-item">Bandeja personalizada</li>
+                    <li class="login__lista-item">Notificaciones inteligentes</li>
+                    <li class="login__lista-item">Eventos y noticias de tu interes</li>
+                    <li class="login__lista-item">Disponible en movil y web</li>
+                </ul>
+                <p class="login__texto">Toma el control de tu correo institucional hoy mismo</p>
+            </div>
+            <div class="login__formulario">
+                <h2 class="login__heading login__heading--azul ">Inicio de Sesión</h2>
+                <form class="formulario" id="formulario">
+                    <div class="formulario__campo">
+                        <label for="correo" class="formulario__label">Correo Institucional</label>
+                        <input id="correo" type="email" class="formulario__input" placeholder="A12345678@alumnos.uady.mx" required/>
+                    </div>                  
+                    <div class="formulario__campo">
+                        <label for="password" class="formulario__label">Contraseña</label>
+                        <input id="password" type="password" class="formulario__input" required/>
+                    </div>     
+                    <button type="submit" class="formulario__boton formulario__boton--disabled" disabled >Iniciar Sesión</button>             
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/login.js"></script>
+</body>
+
+</html>

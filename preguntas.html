@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uni-Mail - Preguntas</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@0,400;0,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+
+<body>
+    <main class="preguntas">
+        <div class="preguntas__grid">
+
+            <div class="preguntas__formulario">
+                <h2 class="preguntas__heading preguntas__heading--azul">Completa el formulario para personalizar tu
+                    experiencia</h2>
+                <form class="formulario">
+                    <div class="formulario__campo">
+                        <label for="licenciatura" class="formulario__label">¿A qué licenciatura perteneces?</label>
+                        <select required class="formulario__input" id="licenciatura">
+                            <option value="" selected disabled>Escoge tu licenciatura</option>
+                            <option> Licenciatura en Actuaría</option>
+                            <option>Licenciatura en Ciencias de la Computación</option>
+                            <option>Licenciatura en Enseñanza de las Matemáticas</option>
+                            <option>Licenciatura en Ingeniería en Computación</option>
+                            <option>Licenciatura en Ingeniería de Software</option>
+                            <option>Licenciatura en Matemáticas</option>
+                            <option>Licenciatura en Contador Público</option>
+                            <option>Licenciatura en Mercadotecnia y Negocios Internacionales</option>
+                            <option>Licenciatura en Administración de Tecnologías de Información</option>
+                            <option>Licenciatura en Administración</option>
+                            <option>Ingeniería en Alimentos</option>
+                            <option>Licenciatura en Ingeniería Civil</option>
+                            <option>Licenciatura en Ingeniería Física.</option>
+                            <option>Licenciatura en Ingeniería en Mecatronica</option>
+                            <option>Licenciatura en Ingeniería Química Industrial</option>
+                            <option>Licenciatura en Ingeniería Industrial Logística</option>
+                            <option>Ingeniería en Biotecnología</option>
+                            <option>Licenciatura Institucional en Química Aplicada</option>
+                            <option>Licenciatura en Química Industrial</option>
+                            <option>Licenciatura en Derecho</option>
+                            <option>Licenciatura en Arqueología</option>
+                            <option>Licenciatura en Literatura Latinoamericana</option>
+                            <option>Licenciatura en Turismo</option>
+                            <option>Licenciatura en Antropología Social</option>
+                            <option>Licenciatura en Comunicación Social</option>
+                            <option>Licenciatura en Historia</option>
+                            <option>Licenciatura en Economía</option>
+                            <option>Licenciatura en Comercio Internacional</option>
+                            <option>Licenciatura en Psicología</option>
+                            <option>Licenciatura en Educación</option>
+                            <option>Licenciatura en Enseñanza del Idioma Inglés</option>
+                            <option>Licenciatura en Ingeniería en Energías Renovables</option>
+                            <option>Licenciatura en Nutrición</option>
+                            <option>Licenciatura en Médico Cirujano</option>
+                            <option>Licenciatura en Rehabilitación</option>
+                            <option>Licenciatura en Cirujano Dentista</option>
+                            <option>Licenciatura en Enfermería</option>
+                            <option>Licenciatura en Trabajo Social</option>
+                            <option>Licenciatura en Químico Farmacéutico Biólogo</option>
+                            <option>Licenciatura en Química</option>
+                            <option>Licenciatura en Artes Visuales</option>
+                            <option>Licenciatura en Diseño del Hábitat</option>
+                            <option>Licenciatura en Arquitectura</option>
+                            <option>Licenciatura en Agroecología</option>
+                            <option>Licenciatura en Medicina Veterinaria y Zootecnia</option>
+                            <option>Licenciatura en Biología</option>
+                            <option>Licenciatura en Biología Marina</option>
+                            <option>Licenciatura en Química Aplicada</option>
+                            <option>Licenciatura en Educación</option>
+                            <option>Licenciatura en Gestión Pública</option>
+                        </select>
+                    </div>
+                    <div class="formulario__campo">
+                        <label for="interes" class="formulario__label">¿Cuáles son tus áreas de interes? (separadas por
+                            una coma)</label>
+                        <input type="text" class="formulario__input" id="interes"
+                            placeholder="Ej. Tecnología, Deportes, Medicina">
+                        <div id="tags__interes" class="formulario__listado">
+                        </div>
+                    </div>
+                    <div class="formulario__campo">
+                        <label for="pregunta1" class="formulario__label">Aquí se pondrá otra pregunta</label>
+                        <input required type="text" class="formulario__input" id="pregunta1"
+                            placeholder="Respuesta Pregunta ">
+                    </div>
+                    <div class="formulario__campo">
+                        <label for="pregunta2" class="formulario__label">Aquí se pondrá otra pregunta</label>
+                        <input required type="text" class="formulario__input" id="pregunta2"
+                            placeholder="Respuesta Pregunta ">
+                    </div>
+                    <div class="formulario__campo formulario__campo--inline">
+                        <label for="recordar" class="formulario__label">Recibir correos de las asignaturas
+                            inscritas</label>
+                        <input type="checkbox" class="formulario__input" id="recordar" checked>
+                    </div>
+                    <div class="formulario__botones">
+                        <button type="submit" class="formulario__boton">Enviar</button>
+                        <a href="dashboard.html" class="formulario__boton">Saltar</a>
+                    </div>
+                </form>
+            </div>
+            <div class="preguntas__contenido">
+                <h1 class="preguntas__heading">Uni-Mail</h1>
+                <p class="preguntas__texto">No te pierdas de eventos, noticias y actividades de la UADY.</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/tags.js"></script>
+</body>
+
+</html>

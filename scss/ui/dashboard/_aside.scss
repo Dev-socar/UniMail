@@ -1,0 +1,66 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.correos {
+  position: relative;
+  height: 100vh;
+  overflow: scroll;
+  padding-bottom: 6.8rem;
+}
+
+.correo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid v.$blanco;
+  transition: all 0.3s ease;
+  padding: 1rem;
+  &:hover {
+    background-color: lighten(v.$primario, 70%);
+    cursor: pointer;
+  }
+  &--activo {
+    background-color: lighten(v.$primario, 50%);
+  }
+  &__propietario-iniciales {
+    width: 15%;
+    span {
+      display: inline-block;
+      width: 5rem;
+      height: 5rem;
+      background-color: v.$blanco;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      color: v.$primario;
+    }
+  }
+
+  &__informacion {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+  }
+  &__propietario-nombre,
+  &__premensaje,
+  &__hora {
+    margin: 0;
+  }
+
+  &__premensaje {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    font-size: 1.2rem;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    width: 80%;
+  }
+  &__hora {
+    font-size: 1.2rem;
+  }
+  &__contenido {
+    display: flex;
+  }
+}
